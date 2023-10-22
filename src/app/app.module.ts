@@ -10,6 +10,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
@@ -24,7 +25,11 @@ export function TranslateHttpLoaderFactory(http: HttpClient) {
     DashboardComponent,
     EditUserComponent,
   ],
-  imports: [CommonModule, BrowserModule, HttpClientModule, AppRoutingModule, FormsModule,
+  imports: [CommonModule, BrowserModule, 
+    HttpClientModule, AppRoutingModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    
     ToastrModule.forRoot(),
     TranslateModule.forRoot({
       loader: {

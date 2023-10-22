@@ -42,7 +42,7 @@ export class DashboardComponent implements OnInit {
   deleteUser(id: number) {
     this.usersService.deleteUser(id).subscribe(
       (response) => {
-        this.toaster.warning(this.translate.instant('Usuario Eliminado'));
+        this.toaster.remove(this.translate.instant('Usuario Eliminado'))
       },
       (error) => {
         this.toaster.error(this.translate.instant('Ha ocurrido un error'));
